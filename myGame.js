@@ -58,7 +58,7 @@ function clearMap(){
 
 //Map背景选择与运动
 function MapBg(level) {
-    oMap.style.backgroundImage = "url('img/bg_"+(level+1)+".png')";
+    oMap.style.backgroundImage = "url('bg_"+(level+1)+".png')";
 
     (function m(){
         oMap.bgPosY = oMap.bgPosY || 0;
@@ -72,7 +72,7 @@ function MapBg(level) {
 function plane(level , pos) {
     //创建我军图片
     var oImg = new Image();//document.createElement("img");
-    oImg.src = "img/myplane.png";
+    oImg.src = "myplane.png";
     oImg.width = 70;
     oImg.height = 70;
     oImg.className = "plane";
@@ -121,7 +121,7 @@ function fire(oImg , level){
     function createBiu(index , d){
         //创建子弹
         var oBiu = new Image();
-        oBiu.src = "img/fire.png";
+        oBiu.src = "fire.png";
         oBiu.width = 100;
         oBiu.height = 100;
         oBiu.className = "biu";
@@ -175,7 +175,7 @@ function enemy(level , oPlane) {
         oEnemy.HP = [20,1][index];
         oEnemy.speed = speed + (Math.random()*0.6 - 0.3)*speed;
         oEnemy.speed *= index?1:0.5;
-        oEnemy.src = "img/enemy_"+["big","small"][index]+".png";
+        oEnemy.src = "enemy_"+["big","small"][index]+".png";
         oEnemy.className = "enemy";
         oEnemy.width = [104,84][index];
         oEnemy.height = [80,70][index];
@@ -230,7 +230,7 @@ function enemy(level , oPlane) {
 //爆炸函数
 function boom(l,t,w,h,i){
     var oBoom = new Image();
-    oBoom.src = "img/"+["boom_small","myplane","boom_big"][i]+".png";
+    oBoom.src = ""+["boom_small","myplane","boom_big"][i]+".png";
     oBoom.className = 'boom'+["","2",""][i];
     oBoom.width = w;
     oBoom.height = h;
