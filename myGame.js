@@ -73,8 +73,8 @@ function plane(level , pos) {
     //创建我军图片
     var oImg = new Image();//document.createElement("img");
     oImg.src = "myplane.png";
-    oImg.width = 70;
-    oImg.height = 70;
+    oImg.width = 50;
+    oImg.height = 50;
     oImg.className = "plane";
     oImg.style.left = pos.x - oImg.width/2 + 'px';
     oImg.style.top = pos.y - oImg.height/2 + 'px';
@@ -122,8 +122,8 @@ function fire(oImg , level){
         //创建子弹
         var oBiu = new Image();
         oBiu.src = "fire.png";
-        oBiu.width = 100;
-        oBiu.height = 100;
+        oBiu.width = 30;
+        oBiu.height = 30;
         oBiu.className = "biu";
 
         var left = oImg.offsetLeft + oImg.width/2 - oBiu.width/2;
@@ -177,8 +177,8 @@ function enemy(level , oPlane) {
         oEnemy.speed *= index?1:0.5;
         oEnemy.src = "enemy_"+["big","small"][index]+".png";
         oEnemy.className = "enemy";
-        oEnemy.width = [104,84][index];
-        oEnemy.height = [80,70][index];
+        oEnemy.width = [50,30][index];
+        oEnemy.height = [60,40][index];
         oEnemy.style.left = Math.random()*w - oEnemy.width/2 + 'px';
         oEnemy.style.top = -oEnemy.height + 'px';
         oMap.appendChild(oEnemy);
