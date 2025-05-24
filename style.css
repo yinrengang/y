@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft yahei", serif;
+}
+li {
+    list-style-type: none;
+}
+body {
+    overflow: hidden;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+}
+#box {
+    position: relative;
+    width: 512px;
+    height: 768px;
+    margin: 20px auto;
+}
+#map {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/bg_1.png");
+    background-size: 100% 100%;
+}
+#level {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+#level h1 {
+    font-size: 40px;
+    padding-top: 60px;
+    padding-bottom: 150px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+}
+#level p {
+    margin: 130px auto;
+    width: 200px;
+    height: 50px;
+    line-height:50px;
+    text-align: center;
+    background: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+#level p:hover {
+    background: #ffa80c;
+    color: #fff;
+}
+#map .plane, #map .biu, #map .enemy, #map .boom, #map .boom2 {
+    position: absolute;
+}
+#map .plane {
+    z-index: 8;
+}
+#map .biu {
+    z-index: 10;
+}
+#map .boom2 {
+    z-index: 11;
+    animation: bling 2s 1;
+    animation-fill-mode: forwards;
+}
+#map .enemy {
+    z-index: 9;
+}
+#map .boom {
+    z-index: 7;
+    animation: fade .8s 1;
+    animation-fill-mode: forwards;
+}
+ @keyframes fade {
+ from {
+opacity: 1;
+}
+ to {
+opacity: 0;
+}
+}
+ @keyframes bling {
+ 0% {
+opacity: 1;
+}
+ 20% {
+opacity: 0;
+}
+ 40% {
+opacity: 1;
+}
+ 60% {
+opacity: 0;
+}
+ 80% {
+opacity: 1;
+}
+ 100% {
+opacity: 0;
+}
+}
+#score {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 20;
+}
+#restart {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+}
+#restart p {
+    width: 300px;
+    height: 40px;
+    line-height: 20px;
+    margin: 140px auto;
+    color: #fff;
+    text-align: center;
+}
+#restart p span {
+    font-weight : bolder;
+    font-size: 22px;
+    text-align: center;
+}
+#restart .p1 span {
+    color: red;
+    font-size: 30px;
+}
+#restart .p2 span {
+    color: #ffa80c;
+}
+#restart .p3 {
+    font-size: 20px;
+    width: 100px;
+    height: 35px;
+    background: rgb(255,255,255);
+    background: rgba(255,255,255,.8);
+    color: #000;
+    font-weight: bolder;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#restart .p3:hover {
+    background: white;
+}
